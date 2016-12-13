@@ -1,0 +1,82 @@
+package com.example;
+
+import android.os.Bundle;
+import android.util.Log;
+
+import com.example.picker.DatePickerFragment;
+import com.example.picker.TimePickerFragment;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class DateTimePicker extends CordovaPlugin {
+
+    private static final String TAG = DateTimePicker.class.getSimpleName();
+
+    private CordovaInterface cordova;
+    private CordovaWebView webView;
+
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
+
+        this.cordova = cordova;
+        this.webView = webView;
+    }
+
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if (action.equals("pick")) {
+            PickerOptions pickerOptions = parseOptions(args);
+
+            if ("date".equals(pickerOptions.getType())) {
+                selectDate(pickerOptions, callbackContext);
+            } else if ("time".equals(pickerOptions.getType())) {
+                selectTime(pickerOptions, callbackContext);
+            } else {
+                Log.e(TAG, "PickerOptions: type doesn't exist.");
+            }
+        }
+        return true;
+    }
+
+    private PickerOptions parseOptions(JSONArray args) {
+        PickerOptions pickerOptions = new PickerOptions();
+
+        try {
+            JSONObject json = args.getJSONObject(0);
+            pickerOptions.setType(json.getString("type"));
+            pickerOptions.setDate(json.getLong("date"));
+            pickerOptions.setMinDate(json.getLong("minDate"));
+            pickerOptions.setMaxDate(json.getLong("maxDate"));
+        } catch (JSONException e) {
+            Log.e(TAG, "Coudn't parse pickerOptions.");
+        }
+
+        return pickerOptions;
+    }
+
+    private void selectTime(PickerOptions options, CallbackContext callbackContext) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("options", options);
+
+        TimePickerFragment timePickerFragment = new TimePickerFragment();
+        timePickerFragment.setArguments(bundle);
+        timePickerFragment.setCallbackContext(callbackContext);
+        timePickerFragment.show(cordova.getActivity().getFragmentManager(), "timePicker");
+    }
+
+    private void selectDate(PickerOptions options, CallbackContext callbackContext) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("options", options);
+
+        DatePickerFragment datePickerFragment = new DatePickerFragment();
+        datePickerFragment.setArguments(bundle);
+        datePickerFragment.setCallbackContext(callbackContext);
+        datePickerFragment.show(cordova.getActivity().getFragmentManager(), "datePicker");
+    }
+
+}

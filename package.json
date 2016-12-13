@@ -1,0 +1,11 @@
+{
+    "name": "cordova-plugin-datetimepicker",
+    "version": "1.0.0",
+    "cordova": {
+        "id": "cordova-plugin-datetimepicker",
+        "platforms": [
+            "android"
+        ]
+    },
+    "description": "Native date and time picker for Android."
+}

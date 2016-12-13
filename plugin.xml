@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-datetimepicker"
+        version="1.0.0">
+
+    <name>Cordova Plugin DateTimePicker</name>
+    <description>Native date and time picker for Android.</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com//</repo>
+    <issue>https://github.com//issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="DateTimePicker"/>
+        </js-module>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DateTimePicker">
+                <param name="android-package" value="com.example.DateTimePicker"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/com/example/DateTimePicker.java" target-dir="src/com/example/"/>
+        <source-file src="src/android/com/example/PickerOptions.java" target-dir="src/com/example/"/>
+        <source-file src="src/android/com/example/picker/BasePickerFragment.java" target-dir="src/com/example/picker/"/>
+        <source-file src="src/android/com/example/picker/DatePickerFragment.java" target-dir="src/com/example/picker/"/>
+        <source-file src="src/android/com/example/picker/TimePickerFragment.java" target-dir="src/com/example/picker/"/>
+    </platform>
+
+</plugin>
