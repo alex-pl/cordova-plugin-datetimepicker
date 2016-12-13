@@ -45,15 +45,28 @@ public class DateTimePicker extends CordovaPlugin {
 
     private PickerOptions parseOptions(JSONArray args) {
         PickerOptions pickerOptions = new PickerOptions();
+        JSONObject json = null;
 
         try {
-            JSONObject json = args.getJSONObject(0);
+            json = args.getJSONObject(0);
             pickerOptions.setType(json.getString("type"));
             pickerOptions.setDate(json.getLong("date"));
-            pickerOptions.setMinDate(json.getLong("minDate"));
-            pickerOptions.setMaxDate(json.getLong("maxDate"));
         } catch (JSONException e) {
             Log.e(TAG, "Coudn't parse pickerOptions.");
+        }
+
+        if (json != null) {
+            try {
+                pickerOptions.setMinDate(json.getLong("minDate"));
+            } catch (JSONException e) {
+                pickerOptions.setMinDate(-1);
+            }
+
+            try {
+                pickerOptions.setMaxDate(json.getLong("maxDate"));
+            } catch (JSONException e) {
+                pickerOptions.setMaxDate(-1);
+            }
         }
 
         return pickerOptions;

@@ -27,8 +27,12 @@ public class DatePickerFragment extends BasePickerFragment
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), this, year, month, day);
         DatePicker datePicker = datePickerDialog.getDatePicker();
-        datePicker.setMinDate(options.getMinDate());
-        datePicker.setMaxDate(options.getMaxDate());
+        if (options.getMinDate() > 0) {
+            datePicker.setMinDate(options.getMinDate());
+        }
+        if (options.getMaxDate() > 0) {
+            datePicker.setMaxDate(options.getMaxDate());
+        }
         return datePickerDialog;
     }
 
