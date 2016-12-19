@@ -31,7 +31,7 @@ public class DateTimePicker extends CordovaPlugin {
             } else if ("time".equals(pickerOptions.getType())) {
                 selectTime(pickerOptions, callbackContext);
             } else {
-                Log.e(TAG, "PickerOptions: type doesn't exist.");
+                Log.e(TAG, "picker type doesn't exist");
             }
         }
         return true;
@@ -46,7 +46,7 @@ public class DateTimePicker extends CordovaPlugin {
             pickerOptions.setType(json.getString("type"));
             pickerOptions.setDate(json.getLong("date"));
         } catch (JSONException e) {
-            Log.e(TAG, "Coudn't parse pickerOptions.");
+            Log.e(TAG, "couldn't parse picker options");
         }
 
         if (json != null) {
