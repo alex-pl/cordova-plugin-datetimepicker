@@ -1,4 +1,4 @@
-package com.example;
+package com.alexanderploner.datetimepicker;
 
 import java.io.Serializable;
 

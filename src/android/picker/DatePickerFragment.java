@@ -1,11 +1,11 @@
-package com.example.picker;
+package com.alexanderploner.datetimepicker.picker;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.widget.DatePicker;
 
-import com.example.PickerOptions;
+import com.alexanderploner.datetimepicker.PickerOptions;
 
 import java.util.Calendar;
 import java.util.Date;

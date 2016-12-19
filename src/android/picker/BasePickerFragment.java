@@ -1,4 +1,4 @@
-package com.example.picker;
+package com.alexanderploner.datetimepicker.picker;
 
 import android.app.DialogFragment;
 

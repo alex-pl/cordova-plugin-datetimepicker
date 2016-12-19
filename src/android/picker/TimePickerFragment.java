@@ -1,4 +1,4 @@
-package com.example.picker;
+package com.alexanderploner.datetimepicker.picker;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.widget.TimePicker;
 
-import com.example.PickerOptions;
+import com.alexanderploner.datetimepicker.PickerOptions;
 
 import java.util.Calendar;
 import java.util.Date;

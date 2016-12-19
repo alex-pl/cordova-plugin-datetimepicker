@@ -1,10 +1,10 @@
-package com.example;
+package com.alexanderploner.datetimepicker;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.picker.DatePickerFragment;
-import com.example.picker.TimePickerFragment;
+import com.alexanderploner.datetimepicker.picker.DatePickerFragment;
+import com.alexanderploner.datetimepicker.picker.TimePickerFragment;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
