@@ -18,14 +18,8 @@ public class DateTimePicker extends CordovaPlugin {
 
     private static final String TAG = DateTimePicker.class.getSimpleName();
 
-    private CordovaInterface cordova;
-    private CordovaWebView webView;
-
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
-
-        this.cordova = cordova;
-        this.webView = webView;
     }
 
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
