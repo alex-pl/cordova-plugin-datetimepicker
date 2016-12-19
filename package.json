@@ -7,5 +7,16 @@
             "android"
         ]
     },
-    "description": "Native date and time picker for Android."
+    "description": "Native date and time picker for Android.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "cordova",
+        "datetime",
+        "ecosystem:cordova",
+        "cordova-android"
+    ],
+    "author": "Alexander Ploner <alex@neatnet.de>",
+    "license": "MIT"
 }
