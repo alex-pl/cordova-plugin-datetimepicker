@@ -17,7 +17,7 @@ public class BasePickerFragment extends DialogFragment {
     }
 
     public void sendResult() {
-        final PluginResult result = new PluginResult(PluginResult.Status.OK, c.getTimeInMillis());
+        final PluginResult result = new PluginResult(PluginResult.Status.OK, String.valueOf(c.getTimeInMillis()));
         callbackContext.sendPluginResult(result);
     }
 

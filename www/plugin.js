@@ -21,12 +21,16 @@ function getTimestampOrNull(date) {
 //     maxDate: Date | number
 // }
 var DateTimePicker = {
-    pick: function(options, cb) {
+    pick: function (options, cb) {
         options.date = getTimestampOrNull(options.date);
         options.minDate = getTimestampOrNull(options.minDate);
         options.maxDate = getTimestampOrNull(options.maxDate);
 
-        exec(cb, null, PLUGIN_NAME, 'pick', [options]);
+        function callback(timestamp) {
+            cb(parseInt(timestamp));
+        }
+
+        exec(callback, null, PLUGIN_NAME, 'pick', [options]);
     }
 };
 
