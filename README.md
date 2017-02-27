@@ -4,13 +4,13 @@ Native date and time picker for Android.
 
 ## Installation
 
-```Shell
+```sh
 cordova plugins add cordova-plugin-datetimepicker --save
 ```
 
 ## Usage
 
-```JavaScript
+```js
 var options = {
     type: 'date',         // 'date' or 'time', required
     date: new Date(),     // date or timestamp, default: current date
@@ -31,7 +31,7 @@ The following screenshots were made on a device with Android 6.0. The plugin use
 
 ## Development
 
-```Shell
+```sh
 # uninstall old version if present
 cordova plugins remove cordova-plugin-datetimepicker
 
