@@ -22,7 +22,7 @@ function getTimestampOrNull(date) {
 // }
 var DateTimePicker = {
     pick: function (options, cb) {
-        options.date = getTimestampOrNull(options.date);
+        options.date = getTimestampOrNull(options.date || new Date());
         options.minDate = getTimestampOrNull(options.minDate);
         options.maxDate = getTimestampOrNull(options.maxDate);
 
