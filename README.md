@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/cordova-plugin-datetimepicker.svg)](https://www.npmjs.com/package/cordova-plugin-datetimepicker)
+
 # Cordova Plugin DateTimePicker
 
 Native date and time picker for Android.
