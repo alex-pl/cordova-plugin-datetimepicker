@@ -5,7 +5,7 @@ Native date and time picker for Android.
 ## Installation
 
 ```Shell
-cordova plugins add https://github.com/alex-pl/cordova-plugin-datetimepicker.git
+cordova plugins add cordova-plugin-datetimepicker --save
 ```
 
 ## Usage
