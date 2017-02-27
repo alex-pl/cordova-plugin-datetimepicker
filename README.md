@@ -23,6 +23,13 @@ window.DateTimePicker.pick(options, function (timestamp) {
 });
 ```
 
+## Screenshots
+
+The following screenshots were made on a device with Android 6.0. The plugin uses the default styles of the device it's running on.
+
+<img src="https://alex-pl.github.io/cordova-plugin-datetimepicker/images/screenshot_date.png" alt="Date Picker" width="200px">  
+<img src="https://alex-pl.github.io/cordova-plugin-datetimepicker/images/screenshot_time.png" alt="Time Picker" width="200px">
+
 ## Development
 
 ```Shell
