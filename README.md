@@ -13,7 +13,7 @@ cordova plugins add https://github.com/alex-pl/cordova-plugin-datetimepicker.git
 ```JavaScript
 var options = {
     type: 'date',         // 'date' or 'time', required
-    date: new Date(),     // date or timestamp, required
+    date: new Date(),     // date or timestamp, default: current date
     minDate: new Date(),  // date or timestamp
     maxDate: new Date()   // date or timestamp
 };
