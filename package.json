@@ -17,6 +17,10 @@
         "ecosystem:cordova",
         "cordova-android"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alex-pl/cordova-plugin-datetimepicker.git"
+    }
     "author": "Alexander Ploner <alex@neatnet.de>",
     "license": "MIT"
 }
