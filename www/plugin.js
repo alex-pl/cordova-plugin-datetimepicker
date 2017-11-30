@@ -3,13 +3,11 @@ var exec = require('cordova/exec');
 var PLUGIN_NAME = 'DateTimePicker';
 
 function getTimestampOrNull(date) {
-    if (date) {
-        if (typeof date === 'object') {
-            // convert Date to timestamp
-            return date.getTime();
-        } else {
-            return date;
-        }
+    if (typeof date === 'object') {
+        // convert Date to timestamp
+        return date.getTime();
+    } else if (typeof date === 'number') {
+        return date;
     }
     return null;
 }

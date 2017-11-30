@@ -6,8 +6,8 @@ public class PickerOptions implements Serializable {
 
     private String type;
     private long date;
-    private long minDate;
-    private long maxDate;
+    private Long minDate;
+    private Long maxDate;
 
     public PickerOptions() {
         // empty constructor
@@ -29,19 +29,19 @@ public class PickerOptions implements Serializable {
         this.date = date;
     }
 
-    public long getMinDate() {
+    public Long getMinDate() {
         return minDate;
     }
 
-    public void setMinDate(long minDate) {
+    public void setMinDate(Long minDate) {
         this.minDate = minDate;
     }
 
-    public long getMaxDate() {
+    public Long getMaxDate() {
         return maxDate;
     }
 
-    public void setMaxDate(long maxDate) {
+    public void setMaxDate(Long maxDate) {
         this.maxDate = maxDate;
     }
 

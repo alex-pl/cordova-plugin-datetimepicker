@@ -53,13 +53,13 @@ public class DateTimePicker extends CordovaPlugin {
             try {
                 pickerOptions.setMinDate(json.getLong("minDate"));
             } catch (JSONException e) {
-                pickerOptions.setMinDate(-1);
+                pickerOptions.setMinDate(null);
             }
 
             try {
                 pickerOptions.setMaxDate(json.getLong("maxDate"));
             } catch (JSONException e) {
-                pickerOptions.setMaxDate(-1);
+                pickerOptions.setMaxDate(null);
             }
         }
 
